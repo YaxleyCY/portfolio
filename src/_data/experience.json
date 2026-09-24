@@ -1,0 +1,178 @@
+{
+  "education": [
+    {
+      "when": "Expected May 2028",
+      "where": "New York, NY",
+      "degree": "M.S. in Financial Economics",
+      "school": "Columbia Business School",
+      "logo": "/assets/logos/cbs.png",
+      "initials": "CBS",
+      "note": "Awarded a $60,000 Fellowship Scholarship"
+    },
+    {
+      "when": "Aug 2022 – May 2026",
+      "where": "Atlanta, GA",
+      "degree": "B.B.A. in Finance & Information Systems and Operations Management",
+      "school": "Emory University, Goizueta Business School · GPA 3.8 / 4.0",
+      "logo": "/assets/logos/emory.png",
+      "initials": "EU",
+      "note": "Linear Algebra · Probability & Statistics · Advanced Calculus for Data Science · Multivariable Calculus · Mergers & Acquisitions · Financial Accounting · Corporate Finance · Macroeconomics. Emory International Relations Association: Youth Mentorship Director & School Representative (2022–2025)."
+    }
+  ],
+  "roles": [
+    {
+      "section": "Professional Experience",
+      "role": "Founding Team Member, Finance & Strategy",
+      "org": "Vision World Technology",
+      "where": "New York, NY",
+      "when": "May 2025 – Present",
+      "logo": null,
+      "initials": "VW",
+      "project": "seed-fundraising-pitch",
+      "summary": [
+        "Built the investor pitch: market segmentation, financial projections, and execution feasibility under China’s industry-education integration policy.",
+        "Joined investor meetings; contributed to securing ~$3–5M in seed funding."
+      ],
+      "bullets": [
+        "Developed an investor pitch articulating market segmentation, financial projections, and execution feasibility under China’s industry-education integration policy framework; participated in investor meetings to support fundraising discussions.",
+        "Contributed to securing ~$3–5M in seed funding intended to enable the initial program’s launch and build-out of operations."
+      ]
+    },
+    {
+      "section": "Professional Experience",
+      "role": "Investment Management Summer Analyst",
+      "org": "Khelp Financial",
+      "where": "New York, NY",
+      "when": "May – Aug 2024",
+      "logo": "/assets/logos/khelp.png",
+      "initials": "KF",
+      "project": "return-correlation-models",
+      "summary": [
+        "Python (Pandas, NumPy) models of return correlations and volatility across equities and fixed income; automated MoM/QoQ performance tracking, cutting reconciliation errors ~35%.",
+        "Portfolio construction experiments on Layer-2 digital assets to assess diversification and risk-adjusted return trade-offs."
+      ],
+      "bullets": [
+        "Leveraged Python (Pandas, NumPy) to construct models analysing return correlations and volatility across equities and fixed income; automated performance tracking, generating MoM and QoQ diagnostics and reducing reconciliation errors by ~35%.",
+        "Conducted portfolio construction experiments on Layer-2 digital assets, testing alternative asset combinations to assess diversification, volatility, and performance trade-offs across risk-adjusted return profiles to support product development."
+      ]
+    },
+    {
+      "section": "Professional Experience",
+      "role": "Private Equity Spring Analyst",
+      "org": "Westlake Securities",
+      "where": "New York, NY",
+      "when": "Feb – May 2024",
+      "logo": "/assets/logos/westlake.png",
+      "initials": "WS",
+      "project": "tech-equity-coverage",
+      "summary": [
+        "Comparable company models for 3 technology equities, benchmarking EV/EBITDA and P/E against peers.",
+        "Financial durability analysis of 2 healthcare targets, translated into buy-side recommendations."
+      ],
+      "bullets": [
+        "Conducted fundamental quantitative analysis on 3 technology sector equities to support initiation of coverage; constructed comparable company analysis models in Excel, benchmarking EV/EBITDA and P/E ratios against peer group averages.",
+        "Analysed 2 healthcare industry target companies, assessing financial durability across cash-flow sustainability, balance sheet strength, and operating leverage; translated findings into buy-side recommendations for client discussions and team review."
+      ]
+    },
+    {
+      "section": "Professional Experience",
+      "role": "Investment Banking Winter Analyst",
+      "org": "JCF Capital Market",
+      "where": "New York, NY",
+      "when": "Dec 2023 – Feb 2024",
+      "logo": "/assets/logos/jcf.png",
+      "initials": "JCF",
+      "project": "healthcare-software-coverage",
+      "summary": [
+        "Led due diligence to initiate coverage on healthcare software and data analytics; 8-page investment deck from 10-K analysis and value-chain mapping.",
+        "Authored CIM investment highlights using multivariate regression to link regional healthcare demand and payer mix to revenue growth."
+      ],
+      "bullets": [
+        "Led due diligence to initiate coverage on the healthcare software and data analytics sector; analysed 10-Ks of market leaders to map the industry value chain and quantify the impact of sector headwinds, culminating in an 8-page investment deck.",
+        "Authored investment highlights sections for a CIM of a property management software company; applied multivariate regression and correlation analysis to link regional healthcare demand and payer mix dynamics to revenue growth trends."
+      ]
+    },
+    {
+      "section": "Professional Experience",
+      "role": "Private Equity Summer Analyst",
+      "org": "Phoenix Sky Capital",
+      "where": "Irvine, CA",
+      "when": "Jun – Aug 2023",
+      "logo": "/assets/logos/phoenix.png",
+      "initials": "PS",
+      "project": "acquisition-screening-model",
+      "summary": [
+        "Rule-based Excel screen filtering 250+ targets on revenue CAGR, EBITDA margins, leverage, and cash-flow stability, with weighted risk-adjusted ranking.",
+        "Compiled the top 8% for diligence; drafted investment memo sections for 2 post-LOI transactions."
+      ],
+      "bullets": [
+        "Designed a rule-based screening model in Excel to filter 250+ targets using quantitative thresholds on revenue CAGR, EBITDA margins, leverage ratios, and cash-flow stability; implemented weighted ranking by risk-adjusted return potential.",
+        "Compiled top 8% of acquisition candidates for further diligence; drafted sections of investment memos for 2 post-LOI transactions, summarising competitive advantages and analysing financial health across cash flow, leverage, and margins."
+      ]
+    },
+    {
+      "section": "Leadership & Extracurriculars",
+      "role": "Teaching Assistant, Corporate Finance",
+      "org": "Emory University, Goizueta Business School",
+      "where": "Atlanta, GA",
+      "when": "Jan – May 2025",
+      "logo": "/assets/logos/emory.png",
+      "initials": "EU",
+      "project": null,
+      "summary": [
+        "Weekly office hours on WACC, CAPM, and DCF mechanics; graded midterms and weekly assignments to target knowledge gaps."
+      ],
+      "bullets": [
+        "Mentored students during weekly office hours on quantitative concepts, including WACC, CAPM, and DCF mechanics; evaluated performance on midterm exams and weekly assignments, identifying knowledge gaps for targeted improvement."
+      ]
+    },
+    {
+      "section": "Leadership & Extracurriculars",
+      "role": "Senior Investment Mentor",
+      "org": "Ascend Investment Group",
+      "where": "Atlanta, GA",
+      "when": "Sep 2023 – May 2025",
+      "logo": null,
+      "initials": "AIG",
+      "project": null,
+      "summary": [
+        "Organised weekly technical workshops on market trends; led stock analysis sessions and presented risk-adjusted return profiles to the investment committee."
+      ],
+      "bullets": [
+        "Organised weekly technical workshops analysing market trends alongside investment team members; mentored students in finance career planning and led stock analysis sessions, presenting risk-adjusted return profiles to the investment committee."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "group": "Tools",
+      "items": [
+        "Python (Pandas, NumPy)",
+        "SQL",
+        "Excel",
+        "FactSet",
+        "S&P Capital IQ",
+        "Microsoft Office",
+        "Sketchbook"
+      ]
+    },
+    {
+      "group": "Methods",
+      "items": [
+        "Financial modelling",
+        "Comparable company analysis",
+        "DCF",
+        "Regression analysis",
+        "Portfolio construction",
+        "Quantitative screening"
+      ]
+    },
+    {
+      "group": "Languages",
+      "items": [
+        "Mandarin (native)",
+        "English"
+      ]
+    }
+  ]
+}

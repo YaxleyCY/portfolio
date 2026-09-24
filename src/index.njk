@@ -1,0 +1,87 @@
+---
+layout: layouts/base.njk
+nav: work
+permalink: /index.html
+---
+{% set leadParts = site.hero.lead.split('{rotate}') %}
+<section class="hero"><div class="wrap">
+  <div>
+    <h1>Hi, I’m <span class="accent">{{ site.firstName }}.</span></h1>
+    <p class="lead">{{ leadParts[0] }}<span class="rotate" data-words="{{ site.hero.rotate | join('|') }}"><span>{{ site.hero.rotate[0] }}</span></span>{{ leadParts[1] }}</p>
+    <ul class="chips">{% for chip in site.hero.chips %}<li>{{ chip }}</li>{% endfor %}</ul>
+    <div class="btn-row">{% if about.why %}<a class="btn" href="{{ '/about/#why' | url }}">Why I do this</a>{% else %}<a class="btn" href="{{ '/about/' | url }}">More about me</a>{% endif %}<a class="btn btn-ghost" href="{{ '/resume/' | url }}">View resume</a></div>
+  </div>
+  <div class="hero-visual">
+    {% include "partials/portrait.njk" %}
+    {% if site.hero.badge %}<div class="badge-float"><strong>{{ site.hero.badge.strong }}</strong><span>{{ site.hero.badge.span }}</span></div>{% endif %}
+  </div>
+</div></section>
+
+{% if site.stats and site.stats.length %}
+<section class="stats"><div class="wrap">
+  {% for s in site.stats %}<div><strong>{{ s.value }}</strong><span>{{ s.label }}</span></div>{% endfor %}
+</div></section>
+{% endif %}
+
+<section class="cases" id="work"><div class="wrap">
+  <div class="section-head"><h2>Selected Work</h2><p>{{ site.workIntro }}</p></div>
+  {% if site.filters and site.filters.length > 1 %}
+  <div class="filters" role="group" aria-label="Filter projects">
+    {% for f in site.filters %}<button{% if loop.first %} class="on"{% endif %} data-f="{{ f.key }}">{{ f.label }}</button>{% endfor %}
+  </div>
+  {% endif %}
+  <div class="case-grid">
+  {% for p in projects %}
+    <a class="case" href="{{ ('/work/' + p.slug + '/') | url }}" data-cat="{{ p.categories | join(' ') }}">
+      <div class="tile {% if p.image %}tile-photo{% else %}tile-{{ p.tile or (loop.index0 % 6) + 1 }}{% endif %}">{% if p.image %}<img src="{{ p.image | url }}" alt="" loading="lazy">{% endif %}<span>{{ p.org }}</span></div>
+      <h3>{{ p.title }}</h3><p>{{ p.summary }}</p>
+      <ul class="chips chips-sm">{% for t in p.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+      <span class="view">View project →</span>
+    </a>
+  {% endfor %}
+  </div>
+</div></section>
+
+<section class="pillars"><div class="wrap">
+  <div class="section-head"><h2>How I Work</h2></div>
+  <div class="pillar-grid">
+    {% for pl in site.pillars %}
+    <div><span class="ico">{% set icon = pl.icon %}{% include "partials/pillar-icon.njk" %}</span><h3>{{ pl.title }}</h3><p>{{ pl.text }}</p></div>
+    {% endfor %}
+  </div>
+</div></section>
+
+<section class="experience"><div class="wrap">
+  <div class="section-head"><h2>Experience</h2><p>{{ site.experienceIntro }} <a class="accent" href="{{ '/resume/' | url }}">full resume →</a></p></div>
+  <ol class="xp">
+    {% for r in experience.roles %}
+    <li class="xp-item">
+      <button class="xp-head" aria-expanded="false">
+        <span class="xp-logo">{% if r.logo %}<img src="{{ r.logo | url }}" alt="">{% else %}<b>{{ r.initials or (r.org | initials) }}</b>{% endif %}</span>
+        <span class="xp-main"><span class="xp-role">{{ r.role }}</span><span class="xp-org">{{ r.org }}{% if r.where %} · {{ r.where }}{% endif %}</span></span>
+        <span class="xp-date">{{ r.when }}</span>
+        <span class="xp-chev" aria-hidden="true"></span>
+      </button>
+      <div class="xp-body"><div>
+        <ul>{% for b in (r.summary or r.bullets) %}<li>{{ b }}</li>{% endfor %}</ul>
+        {% if r.project %}<a href="{{ ('/work/' + r.project + '/') | url }}">See the project →</a>{% endif %}
+      </div></div>
+    </li>
+    {% endfor %}
+  </ol>
+</div></section>
+
+{% if reflections.posts and reflections.posts.length %}
+{% set post = reflections.posts[0] %}
+<section class="refl-teaser"><div class="wrap">
+  <div class="section-head"><h2>{{ reflections.title }}</h2><p>{{ reflections.homeIntro }}</p></div>
+  <a class="teaser-card" href="{{ ('/reflections/#' + post.id) | url }}">
+    <span class="post-num">Post #{{ post.number }}</span>
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.excerpt }}</p>
+    <span class="view">Read the post →</span>
+  </a>
+</div></section>
+{% endif %}
+
+{% set cta = site.cta.home %}{% include "partials/cta.njk" %}

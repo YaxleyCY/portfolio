@@ -1,0 +1,78 @@
+---
+layout: layouts/base.njk
+nav: about
+permalink: /about/index.html
+eleventyComputed:
+  title: "About — {{ site.fullName }}"
+---
+<section class="statement"><div class="wrap">
+  <div>
+    <h1>{{ about.statement }}</h1>
+    <ul class="facts">
+      {% for f in about.facts %}<li><span>{{ f.label }}</span>{{ f.text }}</li>{% endfor %}
+    </ul>
+  </div>
+  {% include "partials/portrait.njk" %}
+</div></section>
+
+<section class="story"><div class="wrap">
+  {% for row in about.story %}
+  <div class="story-row">
+    <h2>{{ row.title }}</h2>
+    <div>
+      {% if row.lead %}<p class="lead">{{ row.lead }}</p>{% endif %}
+      {% for para in row.paragraphs %}<p>{{ para | safe }}</p>{% endfor %}
+    </div>
+  </div>
+  {% if loop.index == 2 and about.whatIDo %}
+  <div class="story-row" id="work">
+    <h2>What I do</h2>
+    <div class="role-grid">
+      {% for w in about.whatIDo %}<div><h3>{{ w.title }}</h3><p>{{ w.text }}</p></div>{% endfor %}
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
+  {% if about.skills %}
+  <div class="story-row">
+    <h2>Skills</h2>
+    <div>
+      {% for g in about.skills %}<h4>{{ g.group }}</h4><ul class="chips">{% for s in g.items %}<li>{{ s }}</li>{% endfor %}</ul>{% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</div></section>
+
+{% if about.why %}
+<section class="why" id="why"><div class="wrap">
+  <p class="eyebrow">{{ about.why.eyebrow }}</p>
+  {% if about.why.quote %}<blockquote class="pullquote">{{ about.why.quote }}</blockquote>{% endif %}
+  {% if about.why.cite %}<p class="cite">{{ about.why.cite | safe }}</p>{% endif %}
+  <div class="why-body">
+    {% for para in about.why.paragraphs %}<p>{{ para | safe }}</p>{% endfor %}
+  </div>
+  {% if about.why.references and about.why.references.length %}
+  <div class="refs">
+    <p><strong>References</strong></p>
+    {% for ref in about.why.references %}<p>{{ ref | safe }}</p>{% endfor %}
+  </div>
+  {% endif %}
+</div></section>
+{% endif %}
+
+{% if about.beyond %}
+<section class="beyond"><div class="wrap">
+  <div class="section-head"><h2>{{ about.beyond.title }}</h2><p>{{ about.beyond.text }}</p></div>
+  {% if about.beyond.images and about.beyond.images.length %}
+  <div class="beyond-grid">
+    {% for img in about.beyond.images %}<img src="{{ img.src | url }}" alt="{{ img.alt }}">{% endfor %}
+  </div>
+  {% endif %}
+</div></section>
+{% endif %}
+
+<section class="cta-band"><div class="wrap">
+  <h2>{{ site.cta.about.title }}</h2>
+  <p>{{ site.cta.about.text }}</p>
+  <div class="btn-row"><a class="btn" href="{{ '/#work' | url }}">View my work</a><a class="btn btn-ghost btn-ghost-light" href="{{ '/contact/' | url }}">Contact</a></div>
+</div></section>

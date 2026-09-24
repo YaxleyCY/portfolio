@@ -1,0 +1,204 @@
+[
+  {
+    "slug": "seed-fundraising-pitch",
+    "title": "Investor Pitch for a Seed Round",
+    "org": "Vision World Technology",
+    "eyebrow": "Vision World Technology · Founding Team",
+    "summary": "The financial and strategic case that helped an early-stage company raise roughly $3–5M in seed funding.",
+    "lead": "As a founding team member on finance and strategy, I built the investor pitch and joined investor meetings for a company operating under China’s industry-education integration policy framework.",
+    "categories": ["strategy"],
+    "tags": ["Strategy", "Fundraising", "Financial projections"],
+    "image": null,
+    "tile": 1,
+    "meta": {
+      "role": "Founding Team Member, Finance & Strategy",
+      "timeline": "May 2025 – Present",
+      "methods": "Market segmentation, financial projections, execution feasibility",
+      "tools": null
+    },
+    "facts": [
+      { "value": "$3–5M", "label": "seed funding the pitch supported" },
+      { "value": "3", "label": "parts of the case: market, financials, execution" }
+    ],
+    "challenge": "An early-stage company needed to convince investors that a program built around China’s industry-education integration policy could find its market, make money, and actually be delivered. That case did not exist yet. It had to be built from scratch and hold up in the room.",
+    "steps": [
+      { "title": "Map the market", "text": "Segmented the addressable market and identified where the initial program should launch first." },
+      { "title": "Build the projections", "text": "Developed financial projections tied to the launch plan so investors could see the path from funding to operations." },
+      { "title": "Test execution feasibility", "text": "Worked through what it would take to deliver under the policy framework, so the plan was credible rather than just ambitious." },
+      { "title": "Support the raise", "text": "Participated in investor meetings to walk through the case and answer questions during fundraising discussions." }
+    ],
+    "diagram": null,
+    "outcome": "The pitch contributed to securing approximately $3–5M in seed funding, intended to launch the initial program and build out operations."
+  },
+  {
+    "slug": "return-correlation-models",
+    "title": "Return Correlation and Volatility Models",
+    "org": "Khelp Financial",
+    "eyebrow": "Khelp Financial · Investment Management",
+    "summary": "Python models of how equities and fixed income move together, plus automated performance tracking that cut reconciliation errors by about 35%.",
+    "lead": "The team needed a clearer view of cross-asset return behaviour and a way to track performance that did not depend on manual reconciliation. I built both in Python.",
+    "categories": ["quant"],
+    "tags": ["Python", "Portfolio analytics", "Automation"],
+    "image": null,
+    "tile": 2,
+    "meta": {
+      "role": "Investment Management Summer Analyst",
+      "timeline": "May – Aug 2024",
+      "methods": "Correlation and volatility analysis, performance diagnostics",
+      "tools": "Python (Pandas, NumPy)"
+    },
+    "facts": [
+      { "value": "35%", "label": "fewer reconciliation errors" },
+      { "value": "2", "label": "asset classes modelled" },
+      { "value": "MoM + QoQ", "label": "diagnostics automated" }
+    ],
+    "challenge": "Return relationships across equities and fixed income were understood informally, and performance tracking relied on manual work that introduced reconciliation errors. The team wanted numbers they could trust and a process that ran itself.",
+    "steps": [
+      { "title": "Assemble the data", "text": "Pulled return series across equities and fixed income into Pandas and cleaned them into a consistent structure." },
+      { "title": "Model correlations and volatility", "text": "Built models with Pandas and NumPy to analyse how returns co-moved and how volatility behaved across the two asset classes." },
+      { "title": "Automate the reporting", "text": "Turned performance tracking into an automated pipeline that produced month-over-month and quarter-over-quarter diagnostics." },
+      { "title": "Measure the difference", "text": "Compared the automated output against the previous process; reconciliation errors fell by roughly 35%." }
+    ],
+    "diagram": {
+      "label": "From raw returns to automated diagnostics",
+      "stages": [
+        { "title": "1 · Data", "text": "Equity and fixed income returns" },
+        { "title": "2 · Model", "text": "Correlations and volatility" },
+        { "title": "3 · Report", "text": "Automated MoM / QoQ diagnostics" }
+      ],
+      "footnotes": ["Pandas, NumPy", "Cross-asset analysis", "~35% fewer reconciliation errors"]
+    },
+    "outcome": "Automated performance tracking with month-over-month and quarter-over-quarter diagnostics, reducing reconciliation errors by roughly 35% and freeing the team from manual checks."
+  },
+  {
+    "slug": "digital-asset-portfolios",
+    "title": "Layer-2 Digital Asset Portfolio Experiments",
+    "org": "Khelp Financial",
+    "eyebrow": "Khelp Financial · Investment Management",
+    "summary": "Portfolio construction experiments testing how Layer-2 digital assets change diversification, volatility, and risk-adjusted returns.",
+    "lead": "Layer-2 digital assets were a candidate for a new product. Before building it, the team needed to know how those assets behaved inside a portfolio, not just on their own.",
+    "categories": ["quant", "research"],
+    "tags": ["Portfolio construction", "Digital assets", "Risk-adjusted returns"],
+    "image": null,
+    "tile": 3,
+    "meta": {
+      "role": "Investment Management Summer Analyst",
+      "timeline": "May – Aug 2024",
+      "methods": "Portfolio construction, diversification and volatility analysis",
+      "tools": "Python (Pandas, NumPy)"
+    },
+    "facts": [],
+    "challenge": "Adding a new asset class to a portfolio can improve diversification or simply add volatility. For Layer-2 digital assets there was little precedent, so the trade-offs had to be measured directly rather than assumed.",
+    "steps": [
+      { "title": "Define the combinations", "text": "Set up alternative portfolios mixing Layer-2 digital assets with traditional holdings in different proportions." },
+      { "title": "Measure diversification and volatility", "text": "Tested how each combination changed portfolio volatility and how much diversification benefit the digital assets actually provided." },
+      { "title": "Compare risk-adjusted profiles", "text": "Evaluated performance on a risk-adjusted basis so higher returns were not mistaken for better portfolios." },
+      { "title": "Feed into the product", "text": "Summarised the trade-offs for the team to use in product development decisions." }
+    ],
+    "diagram": null,
+    "outcome": "A tested set of asset combinations with their diversification, volatility, and risk-adjusted return trade-offs, used to support the team’s product development."
+  },
+  {
+    "slug": "acquisition-screening-model",
+    "title": "Rule-Based Acquisition Screening Model",
+    "org": "Phoenix Sky Capital",
+    "eyebrow": "Phoenix Sky Capital · Private Equity",
+    "summary": "An Excel screen that filtered 250+ acquisition targets on growth, margins, leverage, and cash flow, then ranked them by risk-adjusted return potential.",
+    "lead": "With hundreds of potential targets and limited diligence capacity, the team needed a consistent, defensible way to decide which companies deserved a closer look.",
+    "categories": ["quant", "research"],
+    "tags": ["Private equity", "Excel modelling", "250+ targets"],
+    "image": null,
+    "tile": 4,
+    "meta": {
+      "role": "Private Equity Summer Analyst",
+      "timeline": "Jun – Aug 2023",
+      "methods": "Quantitative screening, weighted ranking, investment memos",
+      "tools": "Excel"
+    },
+    "facts": [
+      { "value": "250+", "label": "targets screened" },
+      { "value": "8%", "label": "shortlisted for further diligence" },
+      { "value": "2", "label": "post-LOI investment memos contributed to" }
+    ],
+    "challenge": "Sourcing produced far more candidates than the team could diligence. Choosing by instinct was slow and inconsistent. The screen had to apply the same quantitative standards to every company and surface the ones worth the team’s time.",
+    "steps": [
+      { "title": "Set the thresholds", "text": "Defined quantitative cut-offs on revenue CAGR, EBITDA margins, leverage ratios, and cash-flow stability." },
+      { "title": "Build the screen", "text": "Implemented the rules in Excel so 250+ targets could be filtered consistently and re-run as the pipeline changed." },
+      { "title": "Rank what passed", "text": "Added a weighted ranking by risk-adjusted return potential so the shortlist was ordered, not just filtered." },
+      { "title": "Go deeper on the shortlist", "text": "Compiled the top 8% for further diligence and drafted investment memo sections for two post-LOI transactions." }
+    ],
+    "diagram": {
+      "label": "From long list to diligence",
+      "stages": [
+        { "title": "1 · Screen", "text": "250+ targets, four quantitative tests" },
+        { "title": "2 · Rank", "text": "Weighted by risk-adjusted return" },
+        { "title": "3 · Diligence", "text": "Top 8% of candidates" }
+      ],
+      "footnotes": ["CAGR · margins · leverage · cash flow", "Weighted scoring", "Investment memos"]
+    },
+    "outcome": "The top 8% of candidates moved into further diligence, and I drafted sections of investment memos for two post-LOI transactions covering competitive advantages and financial health across cash flow, leverage, and margins."
+  },
+  {
+    "slug": "healthcare-software-coverage",
+    "title": "Healthcare Software Sector Coverage",
+    "org": "JCF Capital Market",
+    "eyebrow": "JCF Capital Market · Investment Banking",
+    "summary": "Due diligence to initiate coverage on healthcare software and data analytics, ending in an 8-page investment deck and the investment highlights of a CIM.",
+    "lead": "The team was initiating coverage on healthcare software and data analytics and needed a clear picture of how the industry fit together, which headwinds mattered, and how to tell one company’s story to buyers.",
+    "categories": ["research"],
+    "tags": ["Investment banking", "Sector research", "Regression analysis"],
+    "image": null,
+    "tile": 5,
+    "meta": {
+      "role": "Investment Banking Winter Analyst",
+      "timeline": "Dec 2023 – Feb 2024",
+      "methods": "10-K analysis, value-chain mapping, multivariate regression",
+      "tools": "Excel"
+    },
+    "facts": [
+      { "value": "8", "label": "page investment deck" },
+      { "value": "1", "label": "CIM investment highlights section authored" }
+    ],
+    "challenge": "Initiating coverage means starting from nothing: no view of the sector, no sense of which headwinds are noise and which are structural. And for a live mandate, the CIM had to explain why a property management software company would keep growing.",
+    "steps": [
+      { "title": "Read the filings", "text": "Analysed 10-Ks of the market leaders in healthcare software and data analytics." },
+      { "title": "Map the value chain", "text": "Laid out how the industry fits together, from data providers to software vendors to healthcare customers." },
+      { "title": "Quantify the headwinds", "text": "Measured the impact of sector headwinds so the deck could say how much they mattered, not just that they existed." },
+      { "title": "Write the story", "text": "Authored the investment highlights of a CIM, using multivariate regression and correlation analysis to link regional healthcare demand and payer mix to revenue growth." }
+    ],
+    "diagram": null,
+    "outcome": "An 8-page investment deck initiating sector coverage, and the investment highlights section of a CIM for a property management software company, backed by regression analysis tying regional demand and payer-mix dynamics to revenue growth."
+  },
+  {
+    "slug": "tech-equity-coverage",
+    "title": "Technology Equity Coverage and Comps",
+    "org": "Westlake Securities",
+    "eyebrow": "Westlake Securities · Private Equity",
+    "summary": "Fundamental analysis of three technology equities and two healthcare targets, with comparable company models benchmarking EV/EBITDA and P/E against peers.",
+    "lead": "Two questions, one toolkit: which technology equities deserved coverage, and whether two healthcare targets were financially durable enough to recommend.",
+    "categories": ["research"],
+    "tags": ["Equity research", "Comparable analysis", "Buy-side recommendations"],
+    "image": null,
+    "tile": 6,
+    "meta": {
+      "role": "Private Equity Spring Analyst",
+      "timeline": "Feb – May 2024",
+      "methods": "Fundamental analysis, comparable company analysis, financial durability assessment",
+      "tools": "Excel"
+    },
+    "facts": [
+      { "value": "3", "label": "technology equities covered" },
+      { "value": "2", "label": "healthcare targets analysed" },
+      { "value": "2", "label": "valuation multiples benchmarked" }
+    ],
+    "challenge": "A multiple on its own says very little. To initiate coverage and make recommendations the team could stand behind, each company had to be placed against its peers and tested for how well its finances would hold up.",
+    "steps": [
+      { "title": "Build the comps", "text": "Constructed comparable company analysis models in Excel for three technology sector equities." },
+      { "title": "Benchmark the multiples", "text": "Compared EV/EBITDA and P/E ratios against peer group averages to see where each company sat." },
+      { "title": "Assess durability", "text": "Analysed two healthcare targets on cash-flow sustainability, balance sheet strength, and operating leverage." },
+      { "title": "Make the call", "text": "Translated the findings into buy-side recommendations for client discussions and team review." }
+    ],
+    "diagram": null,
+    "outcome": "Comparable company models supporting initiation of coverage on three technology equities, and buy-side recommendations on two healthcare targets used in client discussions and team review."
+  }
+]

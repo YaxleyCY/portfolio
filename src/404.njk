@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+permalink: /404.html
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  title: "Page not found — {{ site.fullName }}"
+---
+<section class="not-found"><div class="wrap">
+  <p class="eyebrow">404</p>
+  <h1>That page isn’t here.</h1>
+  <p class="lead">The link may be out of date, or the page may have moved.</p>
+  <div class="btn-row">
+    <a class="btn" href="{{ '/' | url }}">Back to the portfolio</a>
+    <a class="btn btn-ghost" href="{{ '/contact/' | url }}">Contact</a>
+  </div>
+</div></section>

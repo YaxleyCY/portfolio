@@ -1,0 +1,14 @@
+<header class="site-header"><div class="wrap">
+  <a class="logo" href="{{ '/' | url }}" aria-label="Home">{% include "partials/logo.njk" %}</a>
+  <button class="nav-toggle" aria-label="Menu" aria-expanded="false">&#9776;</button>
+  <nav class="nav">
+    <a href="{{ '/' | url }}"{% if nav == 'work' %} aria-current="page"{% endif %}>Portfolio</a>
+    <a href="{{ '/about/' | url }}"{% if nav == 'about' %} aria-current="page"{% endif %}>About</a>
+    <a href="{{ '/resume/' | url }}"{% if nav == 'resume' %} aria-current="page"{% endif %}>Resume</a>
+    {% if reflections.posts and reflections.posts.length %}<a href="{{ '/reflections/' | url }}"{% if nav == 'reflections' %} aria-current="page"{% endif %}>Reflections</a>{% endif %}
+    <a href="{{ '/contact/' | url }}"{% if nav == 'contact' %} aria-current="page"{% endif %}>Contact</a>
+    {% if site.linkedin %}<a class="icon" href="{{ site.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">{% include "partials/icon-linkedin.njk" %}</a>{% endif %}
+    {% if site.github %}<a class="icon" href="{{ site.github }}" target="_blank" rel="noopener" aria-label="GitHub">{% include "partials/icon-github.njk" %}</a>{% endif %}
+    <a class="icon" href="mailto:{{ site.email }}" aria-label="Email">{% include "partials/icon-mail.njk" %}</a>
+  </nav>
+</div></header>

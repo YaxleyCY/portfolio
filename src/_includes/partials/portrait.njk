@@ -1,0 +1,3 @@
+{% if site.portrait %}<div class="hero-media"><img src="{{ site.portrait | url }}" alt="Portrait of {{ site.fullName }}"></div>
+{% else %}<div class="hero-media monogram" role="img" aria-label="Placeholder portrait for {{ site.fullName }}"><span>{{ site.firstName | initials }}</span></div>
+{% endif %}

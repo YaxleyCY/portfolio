@@ -1,0 +1,30 @@
+---
+layout: layouts/base.njk
+nav: contact
+permalink: /contact/index.html
+eleventyComputed:
+  title: "Contact — {{ site.fullName }}"
+---
+<section class="contact"><div class="wrap">
+  <div>
+    <h1>{{ site.contact.title }}</h1>
+    <p class="lead">{{ site.contact.lead }}</p>
+    <ul class="facts">
+      <li><span>Email</span><a class="accent" href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+      {% if site.linkedin %}<li><span>LinkedIn</span><a class="accent" href="{{ site.linkedin }}" target="_blank" rel="noopener">{{ site.linkedinLabel or 'LinkedIn' }}</a></li>{% endif %}
+      {% if site.github %}<li><span>GitHub</span><a class="accent" href="{{ site.github }}" target="_blank" rel="noopener">{{ site.githubLabel or 'GitHub' }}</a></li>{% endif %}
+      <li><span>Location</span>{{ site.location }}</li>
+    </ul>
+    <div class="btn-row"><button type="button" class="btn btn-ghost copy-email" data-email="{{ site.email }}">Copy email address</button></div>
+  </div>
+  <form class="form contact-form" data-to="{{ site.email }}" action="mailto:{{ site.email }}" method="get">
+    <label for="name">Your name</label>
+    <input id="name" name="name" type="text" autocomplete="name">
+    <label for="email">Your email <span>(required)</span></label>
+    <input id="email" name="email" type="email" required autocomplete="email">
+    <label for="message">Message <span>(required)</span></label>
+    <textarea id="message" name="message" required></textarea>
+    <button class="btn" type="submit">Send</button>
+    <p class="form-note">Opens your email app with the message filled in. Or just write to <a class="accent" href="mailto:{{ site.email }}">{{ site.email }}</a>.</p>
+  </form>
+</div></section>

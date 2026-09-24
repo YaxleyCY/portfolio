@@ -1,0 +1,15 @@
+{
+  "name": "yaxley-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio site for Yaxley, built with Eleventy and deployed to GitHub Pages.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "eleventy --serve --port 4871",
+    "build": "eleventy",
+    "clean": "rm -rf _site"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}

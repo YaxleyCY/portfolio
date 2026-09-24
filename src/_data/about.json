@@ -1,0 +1,48 @@
+{
+  "statement": "I bring quantitative rigor and business judgment together to make better investment and strategy decisions.",
+  "facts": [
+    { "label": "Now", "text": "M.S. in Financial Economics, Columbia Business School" },
+    { "label": "Before", "text": "B.B.A. Finance & ISOM, Emory Goizueta (GPA 3.8)" },
+    { "label": "Based in", "text": "New York, NY" },
+    { "label": "Languages", "text": "Mandarin, English" }
+  ],
+  "story": [
+    {
+      "title": "Who I am",
+      "lead": "A finance and quantitative analyst who likes the moment a model finally explains what the market is doing.",
+      "paragraphs": [
+        "Across private equity, investment banking, asset management, and a founding team, my approach has stayed the same: get the numbers right, understand the business behind them, and turn the result into a decision someone can act on."
+      ]
+    },
+    {
+      "title": "How I think",
+      "paragraphs": [
+        "<strong>Numbers first.</strong> Screening 250+ acquisition targets on growth, margins, leverage, and cash flow taught me that consistent quantitative standards beat instinct, especially when the list is long.",
+        "<strong>Understand the business behind them.</strong> Reading 10-Ks to map a sector’s value chain is slow, but it is how you know whether a multiple is cheap or just deserved.",
+        "<strong>Automate the repeatable.</strong> At Khelp, turning performance tracking into a Python pipeline cut reconciliation errors by about 35% and gave the team back its time."
+      ]
+    },
+    {
+      "title": "What I’m exploring",
+      "paragraphs": [
+        "How quantitative methods can improve portfolio construction across both traditional and digital assets, and what it takes to turn a policy-driven market opportunity into a fundable business.",
+        "I work on both sides of that question: modelling cross-asset behaviour in Python, and building the financial case for an early-stage company from the founding team."
+      ]
+    }
+  ],
+  "whatIDo": [
+    { "title": "Quantitative analysis", "text": "Return correlation and volatility models, portfolio construction experiments, and rule-based screens in Python and Excel." },
+    { "title": "Investment research", "text": "10-K analysis, comparable company models, financial durability assessments, and buy-side recommendations." },
+    { "title": "Strategy and fundraising", "text": "Market segmentation, financial projections, and investor materials for an early-stage company." }
+  ],
+  "skills": [
+    { "group": "Tools", "items": ["Python (Pandas, NumPy)", "SQL", "Excel", "FactSet", "S&P Capital IQ"] },
+    { "group": "Methods", "items": ["Financial modelling", "Comparable analysis", "DCF", "Regression analysis", "Portfolio construction", "Quantitative screening"] }
+  ],
+  "why": null,
+  "beyond": {
+    "title": "Beyond work",
+    "text": "On stage with Emory A Cappella, on the volleyball court, on the ski slopes, and behind a drawing tablet or a camera. Between Atlanta and New York, always up for something new.",
+    "images": []
+  }
+}

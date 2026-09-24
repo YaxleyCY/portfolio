@@ -1,0 +1,48 @@
+---
+layout: layouts/base.njk
+nav: resume
+permalink: /resume/index.html
+eleventyComputed:
+  title: "Resume — {{ site.fullName }}"
+---
+<section class="cv"><div class="wrap">
+  <div class="section-head"><h1>Resume</h1><p>{{ site.resume.intro }} <a class="accent" href="mailto:{{ site.email }}">{{ site.resume.pdfNote }}</a></p></div>
+
+  <h2 class="cv-h2">Education</h2>
+  {% for e in experience.education %}
+  <article class="cv-item">
+    <div class="cv-meta"><span class="cv-when">{{ e.when }}</span><span class="cv-where">{{ e.where }}</span></div>
+    <div class="cv-logo{% if not e.logo %} mono{% endif %}">{% if e.logo %}<img src="{{ e.logo | url }}" alt="{{ e.school }} logo">{% else %}{{ e.initials or (e.school | initials) }}{% endif %}</div>
+    <div><h3>{{ e.degree }}</h3><p class="cv-org">{{ e.school }}</p>{% if e.note %}<p class="small">{{ e.note }}</p>{% endif %}</div>
+  </article>
+  {% endfor %}
+
+  {% set sections = [] %}
+  {% for r in experience.roles %}{% if r.section not in sections %}{% set sections = (sections.push(r.section), sections) %}{% endif %}{% endfor %}
+  {% for sec in sections %}
+  <h2 class="cv-h2">{{ sec }}</h2>
+  {% for r in experience.roles | where('section', sec) %}
+  <article class="cv-item">
+    <div class="cv-meta"><span class="cv-when">{{ r.when }}</span><span class="cv-where">{{ r.where }}</span></div>
+    <div class="cv-logo{% if not r.logo %} mono{% endif %}">{% if r.logo %}<img src="{{ r.logo | url }}" alt="{{ r.org }} logo">{% else %}{{ r.initials or (r.org | initials) }}{% endif %}</div>
+    <div>
+      <h3>{{ r.role }}</h3><p class="cv-org">{{ r.org }}</p>
+      <ul>{% for b in r.bullets %}<li>{{ b }}</li>{% endfor %}</ul>
+      {% if r.project %}<a class="cv-link" href="{{ ('/work/' + r.project + '/') | url }}">See the project →</a>{% endif %}
+    </div>
+  </article>
+  {% endfor %}
+  {% endfor %}
+
+  {% if experience.skills %}
+  <h2 class="cv-h2">Skills and Languages</h2>
+  {% for g in experience.skills %}
+  <article class="cv-item">
+    <div class="cv-meta"><span class="cv-when">{{ g.group }}</span></div><div class="cv-logo empty"></div>
+    <div><ul class="chips">{% for s in g.items %}<li>{{ s }}</li>{% endfor %}</ul></div>
+  </article>
+  {% endfor %}
+  {% endif %}
+</div></section>
+
+{% set cta = site.cta.resume %}{% include "partials/cta.njk" %}

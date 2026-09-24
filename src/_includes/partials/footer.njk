@@ -1,0 +1,11 @@
+<footer class="site-footer"><div class="wrap">
+  <p>{{ site.footer.tagline }}<br><span class="small">{{ site.footer.small }}</span></p>
+  <nav>
+    <a href="{{ '/about/' | url }}">About</a>
+    <a href="{{ '/resume/' | url }}">Resume</a>
+    {% if reflections.posts and reflections.posts.length %}<a href="{{ '/reflections/' | url }}">Reflections</a>{% endif %}
+    <a href="{{ '/contact/' | url }}">Contact</a>
+    {% if site.linkedin %}<a href="{{ site.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>{% endif %}
+    {% if site.github %}<a href="{{ site.github }}" target="_blank" rel="noopener">GitHub</a>{% endif %}
+  </nav>
+</div></footer>

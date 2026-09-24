@@ -1,0 +1,93 @@
+---
+layout: layouts/base.njk
+nav: work
+mainClass: project
+pagination:
+  data: projects
+  size: 1
+  alias: project
+  addAllPagesToCollections: true
+permalink: "/work/{{ project.slug }}/index.html"
+eleventyComputed:
+  title: "{{ project.title }} — {{ site.fullName }}"
+  description: "{{ project.summary }}"
+---
+{% set idx = pagination.pageNumber %}
+{% set prev = projects[idx - 1] if idx > 0 else projects | last %}
+{% set next = projects[idx + 1] if idx + 1 < projects.length else projects | first %}
+
+<section class="project-hero"><div class="wrap">
+  <a class="back" href="{{ '/#work' | url }}">← All work</a>
+  <div class="hero-grid">
+    <div>
+      <p class="eyebrow">{{ project.eyebrow or project.org }}</p>
+      <h1>{{ project.title }}</h1>
+      <p class="lead">{{ project.lead or project.summary }}</p>
+      <ul class="chips">{% for t in project.tags %}<li>{{ t }}</li>{% endfor %}</ul>
+    </div>
+    {% if project.meta %}
+    <aside class="meta-card">
+      {% if project.meta.role %}<div><span>Role</span>{{ project.meta.role }}</div>{% endif %}
+      {% if project.meta.timeline %}<div><span>Timeline</span>{{ project.meta.timeline }}</div>{% endif %}
+      {% if project.meta.methods %}<div><span>Methods</span>{{ project.meta.methods }}</div>{% endif %}
+      {% if project.meta.tools %}<div><span>Tools</span>{{ project.meta.tools }}</div>{% endif %}
+    </aside>
+    {% endif %}
+  </div>
+</div></section>
+
+<section class="project-photo"><div class="wrap">
+  {% if project.image %}<img src="{{ project.image | url }}" alt="">{% else %}<div class="tile tile-{{ project.tile or 1 }} tile-banner"><span>{{ project.org }}</span></div>{% endif %}
+</div></section>
+
+{% if project.facts and project.facts.length %}
+<section class="project-facts"><div class="wrap">{% for f in project.facts %}<div><strong>{{ f.value }}</strong><span>{{ f.label }}</span></div>{% endfor %}</div></section>
+{% endif %}
+
+<section class="article"><div class="wrap">
+  <aside class="toc"><p>On this page</p>
+    <a href="#s01">The challenge</a><a href="#s02">What I did</a>{% if project.diagram %}<a href="#s03">How it fits together</a>{% endif %}<a href="#s04">Outcome</a>
+  </aside>
+  <div class="article-main">
+    <div class="article-body">
+      <section class="block" id="s01"><h2><span class="idx">01</span>The challenge</h2><p>{{ project.challenge }}</p></section>
+      <section class="block" id="s02"><h2><span class="idx">02</span>What I did</h2>
+        <ol class="steps">
+          {% for s in project.steps %}<li><span class="num">{{ ('0' + loop.index) if loop.index < 10 else loop.index }}</span><div><h3>{{ s.title }}</h3><p>{{ s.text }}</p></div></li>{% endfor %}
+        </ol>
+      </section>
+    </div>
+    {% if project.diagram %}
+    {% set d = project.diagram %}
+    <section class="block wide" id="s03"><h2><span class="idx">03</span>How it fits together</h2>
+      <div class="diagram-wrap">
+        {% set n = d.stages.length %}{% set w = 900 %}{% set gap = 60 %}{% set bw = ((w - 60 - gap * (n - 1)) / n) | round %}
+        <svg class="diagram" viewBox="0 0 {{ w }} 300" role="img" aria-label="{{ d.label }}" font-family="Inter, system-ui, sans-serif">
+          <defs><marker id="ar" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#17456f"/></marker></defs>
+          <text x="{{ w / 2 }}" y="40" text-anchor="middle" font-size="13" fill="#555" letter-spacing="2">{{ d.label | upper }}</text>
+          {% for st in d.stages %}
+          {% set x = 30 + loop.index0 * (bw + gap) %}{% set cx = x + bw / 2 %}
+          <rect x="{{ x }}" y="90" width="{{ bw }}" height="110" rx="10" style="fill:{{ 'var(--accent)' if loop.last else '#fff' }};stroke:var(--accent)" stroke-width="2"/>
+          <text x="{{ cx }}" y="137" text-anchor="middle" font-weight="500" font-size="16" fill="{{ '#fff' if loop.last else '#000' }}">{{ st.title }}</text>
+          <text x="{{ cx }}" y="159" text-anchor="middle" font-size="12" fill="{{ '#e6fffa' if loop.last else '#555' }}">{{ st.text }}</text>
+          {% if not loop.last %}<line x1="{{ x + bw + 5 }}" y1="145" x2="{{ x + bw + gap - 5 }}" y2="145" stroke="#17456f" stroke-width="2" marker-end="url(#ar)"/>{% endif %}
+          {% if d.footnotes and d.footnotes[loop.index0] %}<text x="{{ cx }}" y="250" text-anchor="middle" font-size="12" fill="#555">{{ d.footnotes[loop.index0] }}</text>{% endif %}
+          {% endfor %}
+        </svg>
+      </div>
+    </section>
+    {% endif %}
+    <div class="article-body">
+      <section class="block" id="s04"><h2><span class="idx">{{ '04' if project.diagram else '03' }}</span>Outcome</h2><div class="callout"><p>{{ project.outcome }}</p></div></section>
+    </div>
+  </div>
+</div></section>
+
+{% if projects.length > 1 %}
+<section class="project-nav"><div class="wrap">
+  <a href="{{ ('/work/' + prev.slug + '/') | url }}">{% if prev.image %}<img src="{{ prev.image | url }}" alt="">{% else %}<span class="thumb tile-{{ prev.tile or 1 }}"></span>{% endif %}<div><span>← Previous project</span>{{ prev.title }}</div></a>
+  <a href="{{ ('/work/' + next.slug + '/') | url }}" class="next">{% if next.image %}<img src="{{ next.image | url }}" alt="">{% else %}<span class="thumb tile-{{ next.tile or 1 }}"></span>{% endif %}<div><span>Next project →</span>{{ next.title }}</div></a>
+</div></section>
+{% endif %}
+
+{% set cta = site.cta.project %}{% include "partials/cta.njk" %}

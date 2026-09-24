@@ -1,0 +1,49 @@
+---
+layout: layouts/base.njk
+nav: reflections
+mainClass: reflections
+eleventyComputed:
+  title: "{{ reflections.title }} — {{ site.fullName }}"
+---
+<section class="refl-hero"><div class="wrap">
+  <p class="eyebrow">{{ reflections.eyebrow }}</p>
+  <h1>{{ reflections.title }}</h1>
+  <p class="lead">{{ reflections.lead }}</p>
+</div></section>
+
+<section class="refl-body"><div class="wrap">
+  {% if reflections.posts.length %}
+  <aside class="toc post-index">
+    <p>Posts</p>
+    {% for post in reflections.posts %}<a href="#{{ post.id }}"{% if loop.first %} class="on"{% endif %}><span>#{{ post.number }}</span>{{ post.title }}</a>{% endfor %}
+  </aside>
+  <div class="article-main">
+    {% for post in reflections.posts %}
+    <article class="post" id="{{ post.id }}">
+      <div class="post-head">
+        <span class="post-num">Post #{{ post.number }}</span>
+        <h2>{{ post.title }}</h2>
+        {% if post.meta %}<p class="post-meta">{{ post.meta }}</p>{% endif %}
+      </div>
+      {% if post.quote %}<blockquote class="post-quote">{{ post.quote }}</blockquote>{% endif %}
+      <div class="post-body">
+        {% for para in post.paragraphs %}<p>{{ para | safe }}</p>{% endfor %}
+      </div>
+      {% if post.takeaways and post.takeaways.length %}
+      <div class="post-takeaways">
+        <h3>Ideas I’m carrying forward</h3>
+        <ul>{% for t in post.takeaways %}<li>{{ t | safe }}</li>{% endfor %}</ul>
+      </div>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </div>
+  {% else %}
+  <div class="empty-state">
+    <h2>Nothing here yet</h2>
+    <p>Posts will appear here once the first one is added to <code>src/_data/reflections.json</code>.</p>
+  </div>
+  {% endif %}
+</div></section>
+
+{% set cta = site.cta.reflections %}{% include "partials/cta.njk" %}
