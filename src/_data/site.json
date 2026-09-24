@@ -3,38 +3,69 @@
   "fullName": "Yaxley Cheng",
   "title": "Yaxley Cheng | Finance. Quantitative analysis. Strategy.",
   "description": "Yaxley Cheng brings quantitative rigor to investment research, portfolio analysis, and early-stage strategy. M.S. in Financial Economics candidate at Columbia Business School.",
-
   "email": "YCheng28@gsb.columbia.edu",
   "linkedin": "https://www.linkedin.com/in/yaxley-cheng/",
   "linkedinLabel": "yaxley-cheng",
   "github": "https://github.com/YaxleyCY",
   "githubLabel": "YaxleyCY",
   "location": "New York, NY",
-
-  "portrait": null,
-
+  "portrait": "/assets/portrait.jpg",
   "hero": {
     "lead": "I bring quantitative rigor to {rotate}.",
-    "rotate": ["investment decisions", "portfolio construction", "company analysis", "early-stage strategy"],
-    "chips": ["Quantitative analysis", "Investment research", "Python & SQL", "Financial modelling"],
-    "badge": { "strong": "Columbia Business School", "span": "M.S. Financial Economics · 2028" }
+    "rotate": [
+      "investment decisions",
+      "portfolio construction",
+      "company analysis",
+      "early-stage strategy"
+    ],
+    "chips": [
+      "Quantitative analysis",
+      "Investment research",
+      "Python & SQL",
+      "Financial modelling"
+    ],
+    "badge": {
+      "strong": "Columbia Business School",
+      "span": "M.S. Financial Economics · 2028"
+    }
   },
-
   "stats": [
-    { "value": "250+", "label": "acquisition targets screened" },
-    { "value": "35%", "label": "fewer reconciliation errors" },
-    { "value": "$3–5M", "label": "seed round supported" },
-    { "value": "5", "label": "finance roles across PE, IB, and asset management" }
+    {
+      "value": "250+",
+      "label": "acquisition targets screened"
+    },
+    {
+      "value": "35%",
+      "label": "fewer reconciliation errors"
+    },
+    {
+      "value": "$3–5M",
+      "label": "seed round supported"
+    },
+    {
+      "value": "5",
+      "label": "finance roles across PE, IB, and asset management"
+    }
   ],
-
   "workIntro": "Projects where quantitative analysis met real investment and strategy decisions.",
   "filters": [
-    { "key": "all", "label": "All" },
-    { "key": "quant", "label": "Quantitative" },
-    { "key": "research", "label": "Investment research" },
-    { "key": "strategy", "label": "Strategy" }
+    {
+      "key": "all",
+      "label": "All"
+    },
+    {
+      "key": "quant",
+      "label": "Quantitative"
+    },
+    {
+      "key": "research",
+      "label": "Investment research"
+    },
+    {
+      "key": "strategy",
+      "label": "Strategy"
+    }
   ],
-
   "pillars": [
     {
       "icon": "chart",
@@ -52,27 +83,41 @@
       "text": "Turn recurring analysis into tools in Python or Excel so the team spends time on judgment instead of reconciliation."
     }
   ],
-
   "experienceIntro": "Seven roles across private equity, investment banking, asset management, teaching, and an early-stage startup. Tap a role to expand it, or read the",
-
   "cta": {
-    "home": { "title": "Let’s talk markets", "text": "Based in New York. Always up for a conversation about investing, quantitative analysis, and building something from zero.", "button": "Connect with me" },
-    "about": { "title": "Seen enough? Let’s talk.", "text": "Take a look at the work, or reach out directly." },
-    "resume": { "title": "Let’s make an impact", "text": "Open to opportunities in investment research, quantitative analysis, and strategy.", "button": "Let’s connect" },
-    "project": { "title": "Want to hear more?", "text": "I’m happy to walk through any of this work in detail.", "button": "Get in touch" },
-    "reflections": { "title": "Want to compare notes?", "text": "I’m always happy to talk about what I’m learning.", "button": "Get in touch" }
+    "home": {
+      "title": "Let’s talk markets",
+      "text": "Based in New York. Always up for a conversation about investing, quantitative analysis, and building something from zero.",
+      "button": "Connect with me"
+    },
+    "about": {
+      "title": "Seen enough? Let’s talk.",
+      "text": "Take a look at the work, or reach out directly."
+    },
+    "resume": {
+      "title": "Let’s make an impact",
+      "text": "Open to opportunities in investment research, quantitative analysis, and strategy.",
+      "button": "Let’s connect"
+    },
+    "project": {
+      "title": "Want to hear more?",
+      "text": "I’m happy to walk through any of this work in detail.",
+      "button": "Get in touch"
+    },
+    "reflections": {
+      "title": "Want to compare notes?",
+      "text": "I’m always happy to talk about what I’m learning.",
+      "button": "Get in touch"
+    }
   },
-
   "footer": {
     "tagline": "Finance. Quantitative analysis. Strategy.",
     "small": "M.S. in Financial Economics candidate, Columbia Business School."
   },
-
   "contact": {
     "title": "Let’s make an impact",
     "lead": "Open to conversations about investment research, quantitative analysis, and early-stage strategy."
   },
-
   "resume": {
     "intro": "Finance, quantitative analysis, and strategy across private equity, investment banking, asset management, and a founding team.",
     "pdfNote": "Email me for a PDF."
